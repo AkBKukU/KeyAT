@@ -1,0 +1,46 @@
+{[
+
+{
+    "format" : "character",
+    "mode" : "line",
+    "delay" : 10,
+    "structure" : "lines",
+    "data" : [ 
+        "cd /tmp",
+        "touch test.txt",
+        "echo \"Writing to a file\" >> test.txt"
+    ]
+    
+},
+
+{
+    "format" : "scancode",
+    "mode" : "immidiate",
+    "structure" : "timeline",
+    "data" : [
+        {"timestamp","Key"."State"}
+        {100, "Up",1},
+        {100, "Shift L",1},
+        {200, "Left",1},
+        {250, "Left",0},
+        {400, "Left",1},
+        {450, "Left",0},
+        {800, "Up",0},
+        {800, "Shift L",0}
+    ]
+},
+
+{
+    "format" : "scancode",
+    "mode" : "immidiate",
+    "structure" : "delays",
+    "data" : [
+        {"Key", "Durration", "Delay"}
+        {"Enter",50,2000},
+        {"Enter",50,2000},
+        {"wait"},
+        {"L",50,2000},
+        {"Enter",50,2000},
+    ]
+}
+]}
