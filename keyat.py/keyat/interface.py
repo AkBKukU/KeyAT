@@ -15,7 +15,7 @@ class Interface():
     def parse_args(self,args):
 
         if args.string is not None:
-            self.string = args.string.replace("\\n","~:28").replace("\n","~:28").replace("~","~+54~:41~-54")
+            self.string = args.string.replace("~","~+54~:41~-54").replace("\\n","~:28").replace("\n","~:28")
 
         
         self.serial = serial.Serial(self.p, self.brate, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, rtscts=0, xonxoff=1)
